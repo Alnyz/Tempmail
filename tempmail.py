@@ -62,7 +62,6 @@ if __name__ == "__main__":
 	print("="*(len(mail) + 1))
 	print(mail)
 	print("="*(len(mail) + 1))
-	get = False
 	while 1:
 		data = t.waiting_message(mail)
 		if "error" in data:
@@ -70,6 +69,4 @@ if __name__ == "__main__":
 			continue
 		else:
 			print(data)
-			get = True
-		if get:
-			break
+			
