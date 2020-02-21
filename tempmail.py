@@ -24,8 +24,7 @@ class TempsMail(object):
 		self._wraper = cfscrape.create_scraper(sess=self._session, delay=5)
 		
 	def email_to_md5(self, email: str):
-		return hashlib.md5("{email}". \
-							format(email=email).encode('utf-8')).hexdigest()
+		return hashlib.md5("{email}".format(email=email).encode('utf-8')).hexdigest()
 							
 	def get_email(self):
 		req = self._wraper.get(url=self.BASE_URI)
